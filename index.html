@@ -1046,6 +1046,52 @@
   [data-theme="dark"] .check-item .check-box { background: #1a1a1a; border-color: #3a3a3a; }
   [data-theme="dark"] .phase-progress-track { background: #222; }
   [data-theme="dark"] .check-item input.phase-check:checked ~ .check-label { color: #5a5a56; }
+
+  /* ── Key dates ───────────────────────────────────── */
+  .key-dates { margin: 0 0 24px; max-width: 860px; }
+  .key-dates-title {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #999; margin-bottom: 8px;
+  }
+  .key-date {
+    display: flex; align-items: center; gap: 16px;
+    background: #fff; border: 1.5px solid #d4d4cd; border-left: 4px solid #10b981;
+    border-radius: 8px; padding: 12px 16px; margin-bottom: 8px;
+  }
+  .key-date.phase-2 { border-left-color: #3b82f6; }
+  .key-date.phase-3 { border-left-color: #f59e0b; }
+  .key-date-when {
+    flex: 0 0 auto; min-width: 104px;
+    font-size: 13px; font-weight: 700; color: #222; line-height: 1.3;
+  }
+  .key-date-day {
+    display: block; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; color: #999;
+  }
+  .key-date-body { flex: 1 1 auto; min-width: 0; }
+  .key-date-what { font-size: 13px; font-weight: 700; color: #333; }
+  .key-date-note { font-size: 11px; color: #777; line-height: 1.45; margin-top: 2px; }
+  .key-date-tag {
+    flex: 0 0 auto; font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: #0f8a62; background: #e7f8f1;
+    padding: 3px 8px; border-radius: 4px; white-space: nowrap;
+  }
+  .key-date.phase-2 .key-date-tag { color: #2563eb; background: #e8f0fe; }
+  .key-date.phase-3 .key-date-tag { color: #b45309; background: #fef3dc; }
+  [data-theme="dark"] .key-date { background: #1a1a1a; border-color: #2e2e2e; border-left-color: #10b981; }
+  [data-theme="dark"] .key-date.phase-2 { border-left-color: #3b82f6; }
+  [data-theme="dark"] .key-date.phase-3 { border-left-color: #f59e0b; }
+  [data-theme="dark"] .key-date-when { color: #e8e8e4; }
+  [data-theme="dark"] .key-date-what { color: #d0d0cc; }
+  [data-theme="dark"] .key-date-note { color: #777772; }
+  [data-theme="dark"] .key-dates-title, [data-theme="dark"] .key-date-day { color: #666662; }
+  [data-theme="dark"] .key-date-tag { color: #34d399; background: #12261f; }
+  [data-theme="dark"] .key-date.phase-2 .key-date-tag { color: #7fb0ff; background: #141f33; }
+  [data-theme="dark"] .key-date.phase-3 .key-date-tag { color: #fbbf24; background: #2a2010; }
+  @media (max-width: 560px) {
+    .key-date { flex-wrap: wrap; gap: 8px 16px; }
+    .key-date-body { flex-basis: 100%; order: 3; }
+  }
 </style>
 </head>
 <body>
@@ -1067,8 +1113,8 @@
   <div class="header-left">
     <p class="sitemap-title">Project Shadowpay (Working Project Name)</p>
     <h1 class="sitemap-subtitle">Sitemap &amp; Project Status Tracker</h1>
-    <p class="sitemap-date">Last updated: November 17, 2026</p>
-    <p class="sitemap-update">↳ Final proposal scope applied: brand identity system added as Phase 1, migration restored to the build phase, 28-week schedule.</p>
+    <p class="sitemap-date">Last updated: November 20, 2026</p>
+    <p class="sitemap-update">↳ Brand identity presentation set for Wednesday, November 25, 2026. Key dates are now listed under Project Scope.</p>
   </div>
 
 
@@ -1158,7 +1204,20 @@
     <strong>Timeline:</strong> 28 weeks from kickoff, delivered across three tracker phases (final proposal scope, updated November 17, 2026).&nbsp;
     <br><br>
     Full rebrand and rebuild: a complete responsive brand identity system for the new brand (logo suite, style guide, color systems, brand book), a revamped Figma Master Brand Library as the single source of truth, high-fidelity designs for the complete marketing site, WordPress to Sanity content migration, and a modular Next.js + Sanity build through launch. Site design and development begin once the new brand materials are approved, so the identity phase leads the schedule.
-    <strong>Current status: Brand identity exploration in progress. Figma workspace live; Sanity and staging environments already set up.</strong>
+    <strong>Current status: Brand identity in progress. Logotype, color palette and typography directions are in development ahead of the full identity presentation on November 25. Figma workspace live; Sanity and staging environments already set up.</strong>
+  </div>
+
+  <div class="key-dates">
+    <div class="key-dates-title">Key Dates</div>
+    <!-- One .key-date block per date, in date order. Add class phase-2 or phase-3 to recolor; update the tag text to match. -->
+    <div class="key-date">
+      <div class="key-date-when"><span class="key-date-day">Wednesday</span>Nov 25, 2026</div>
+      <div class="key-date-body">
+        <div class="key-date-what">Brand identity presentation</div>
+        <div class="key-date-note">Full presentation of the identity system: logotype, color palette, typography and brand applications.</div>
+      </div>
+      <span class="key-date-tag">Phase 1</span>
+    </div>
   </div>
 
   <div class="columns">
